@@ -1,0 +1,21 @@
+<html>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+<body>
+
+<h2> WAMA: Data Collection Website </h2>
+
+<div> Results </div>
+<div id='results'>
+
+</div>
+
+<script>
+var i = 0
+window.setInterval(function() {;
+   $("#results").load("collector/get_data");
+}, 7000);
+</script>
+</body>
+</html>
+  
+
