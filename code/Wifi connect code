@@ -1,0 +1,23 @@
+import network
+import time
+
+# Set up Wi-Fi
+wlan = network.WLAN(network.STA_IF)
+wlan.active(True)
+
+print("Connecting to WiFi", end="")
+
+# Replace this with your correct Wi-Fi info
+wlan.connect("ATTmudUNk6", "Reginad1*")
+
+# Wait for connection
+for i in range(15):
+    if wlan.isconnected():
+        print("\nConnected!")
+        print("IP address:", wlan.ifconfig()[0])
+        break
+    time.sleep(1)
+    print(".", end="")
+else:
+    print("\nFailed to connect to WiFi.")
+
